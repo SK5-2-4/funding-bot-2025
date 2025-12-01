@@ -47,7 +47,7 @@ def bot():
     position_opened = False
     while True:
         try:
-            fr = exchange.fetch_funding_rate('BTC/USDT')['fundingRate']
+            fr = exchange.fetch_funding_rate('BTCUSDT')['fundingRate']
             bal = exchange.fetch_balance()['USDT']['total']
             price = exchange.fetch_ticker(SYMBOL)['last']
             print(f"{datetime.datetime.now().strftime('%H:%M')} | Funding +{fr*100:.4f}% | 残高 {bal:.1f} USDT | 価格 ${price:,.0f}")
